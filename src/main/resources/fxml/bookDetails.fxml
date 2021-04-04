@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="644.0" prefWidth="1169.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.digitized.controller.CbookDetails">
+   <children>
+      <Pane prefHeight="103.0" prefWidth="1169.0">
+         <children>
+            <ProgressBar fx:id="progressBar" layoutX="361.0" layoutY="43.0" prefHeight="18.0" prefWidth="459.0" progress="0.0" style="-fx-background: transparent;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ProgressBar>
+            <Circle fx:id="userDetailsCircle" fill="WHITE" layoutX="361.0" layoutY="52.0" radius="10.0" stroke="#ababab" strokeType="INSIDE" />
+            <Text fx:id="userDetailsText" fill="#8d8d8d" layoutX="343.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Details">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </Text>
+            <Circle fx:id="loanDetailsCircle" fill="WHITE" layoutX="585.0" layoutY="52.0" radius="10.0" stroke="#ababab" strokeType="INSIDE" />
+            <Text fx:id="loanDetailsText" fill="#8d8d8d" layoutX="547.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loan Details">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </Text>
+            <Circle fx:id="confirmationCircle" fill="WHITE" layoutX="811.0" layoutY="52.0" radius="10.0" stroke="#ababab" strokeType="INSIDE" />
+            <Text fx:id="confirmationText" fill="#8d8d8d" layoutX="771.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmation">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </Text>
+            <HBox fx:id="actionMessage" alignment="CENTER" layoutX="334.0" layoutY="-70.0" prefHeight="32.0" prefWidth="501.0" style="-fx-background-color: #e94a4a;" visible="false">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </HBox>
+         </children>
+      </Pane>
+      <HBox alignment="CENTER" prefHeight="469.0" prefWidth="1169.0">
+         <children>
+            <AnchorPane prefHeight="469.0" prefWidth="552.0">
+               <children>
+                  <TextField fx:id="searchBar" layoutX="36.0" layoutY="20.0" onKeyTyped="#retrieveBookList" prefHeight="27.0" prefWidth="315.0" promptText="Type here to search book by title" style="-fx-border-style: hidden; -fx-background-color: white;">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" offsetX="2.0" offsetY="2.0">
+                           <color>
+                              <Color red="0.843137264251709" green="0.843137264251709" blue="0.843137264251709" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font name="Segoe UI" size="14.0" />
+                     </font>
+                  </TextField>
+                  <ScrollPane fx:id="bookListPane" hbarPolicy="NEVER" layoutX="33.0" layoutY="67.0" prefHeight="379.0" prefWidth="495.0" style="-fx-background-color: white;">
+                     <effect>
+                        <DropShadow offsetX="2.0" offsetY="2.0">
+                           <color>
+                              <Color red="0.843137264251709" green="0.843137264251709" blue="0.843137264251709" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <content>
+                        <VBox fx:id="bookList" prefHeight="375.0" prefWidth="493.0" spacing="10.0" />
+                     </content>
+                  </ScrollPane>
+                  <ComboBox fx:id="searchByBox" layoutX="348.0" layoutY="20.0" onAction="#changeSearchType" prefHeight="27.0" prefWidth="180.0" style="-fx-background-color: white; -fx-border-style: hidden hidden hidden solid; -fx-border-color: #c3c3c3;">
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" offsetX="2.0" offsetY="2.0">
+                           <color>
+                              <Color red="0.843137264251709" green="0.843137264251709" blue="0.843137264251709" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ComboBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <AnchorPane prefHeight="51.0" prefWidth="1169.0">
+         <children>
+            <Button fx:id="backBtn" layoutX="343.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#backButtonClicked" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="Back" textFill="#616161">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color red="0.8289473652839661" green="0.8289473652839661" blue="0.8289473652839661" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Button fx:id="nextBtn" layoutX="734.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#validateFields" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #60C79A;" text="Next" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color red="0.8289473652839661" green="0.8289473652839661" blue="0.8289473652839661" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

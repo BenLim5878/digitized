@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="569.0" prefWidth="1169.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.digitized.controller.CuserDetails">
+   <children>
+      <Pane prefHeight="103.0" prefWidth="1169.0">
+         <children>
+            <ProgressBar fx:id="progressBar" layoutX="361.0" layoutY="43.0" prefHeight="18.0" prefWidth="459.0" progress="0.0" style="-fx-background: transparent;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ProgressBar>
+            <Circle fx:id="userDetailsCircle" fill="WHITE" layoutX="361.0" layoutY="52.0" radius="10.0" stroke="#ababab" strokeType="INSIDE" />
+            <Text fx:id="userDetailsText" fill="#8d8d8d" layoutX="343.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Details">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </Text>
+            <Circle fx:id="loanDetailsCircle" fill="WHITE" layoutX="585.0" layoutY="52.0" radius="10.0" stroke="#ababab" strokeType="INSIDE" />
+            <Text fx:id="loanDetailsText" fill="#8d8d8d" layoutX="547.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loan Details">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </Text>
+            <Circle fx:id="confirmationCircle" fill="WHITE" layoutX="811.0" layoutY="52.0" radius="10.0" stroke="#ababab" strokeType="INSIDE" />
+            <Text fx:id="confirmationText" fill="#8d8d8d" layoutX="771.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmation">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </Text>
+            <HBox fx:id="actionMessage" alignment="CENTER" layoutX="333.0" layoutY="-70.0" prefHeight="32.0" prefWidth="501.0" style="-fx-background-color: #e94a4a;" visible="false">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </HBox>
+         </children></Pane>
+      <AnchorPane prefHeight="65.0" prefWidth="1169.0">
+         <children>
+            <Text layoutX="410.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID Number">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="idNumber" editable="true" layoutX="540.0" layoutY="20.0" onAction="#autoCompleteFields" onKeyReleased="#autoCompleteFields" prefHeight="25.0" prefWidth="238.0" style="-fx-background-color: white;">
+               <effect>
+                  <DropShadow offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color red="0.9342105388641357" green="0.9342105388641357" blue="0.9342105388641357" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ComboBox>
+            <Button fx:id="addMemberBtn" layoutX="796.0" layoutY="25.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="21.0" style="-fx-background-color: #c3c3c3; -fx-background-radius: 4;">
+               <padding>
+                  <Insets bottom="-1.0" left="-1.0" right="-1.0" top="-1.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@materials/plus-white.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <DropShadow offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color red="0.8815789222717285" green="0.8815789222717285" blue="0.8815789222717285" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="65.0" prefWidth="1169.0">
+         <children>
+            <Text layoutX="409.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Full Name">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="fullNameInput" layoutX="540.0" layoutY="19.0" prefHeight="25.0" prefWidth="238.0" style="-fx-border-style: hidden; -fx-background-color: white;">
+               <effect>
+                  <DropShadow offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color red="0.9342105388641357" green="0.9342105388641357" blue="0.9342105388641357" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </TextField>
+            <AnchorPane fx:id="fullNameError" layoutX="797.0" layoutY="11.0" prefHeight="44.0" prefWidth="214.0" visible="false" AnchorPane.rightAnchor="158.0">
+               <children>
+                  <ImageView fitHeight="21.0" fitWidth="18.0" layoutX="5.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@materials/error.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="38.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please provide a proper name">
+                     <font>
+                        <Font name="Segoe UI" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="65.0" prefWidth="1169.0">
+         <children>
+            <Text layoutX="409.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="emailAddressInput" layoutX="540.0" layoutY="18.0" prefHeight="25.0" prefWidth="238.0" style="-fx-background-color: white;">
+               <effect>
+                  <DropShadow offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color red="0.9342105388641357" green="0.9342105388641357" blue="0.9342105388641357" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </TextField>
+            <AnchorPane fx:id="emailAddressError" layoutX="797.0" layoutY="9.0" prefHeight="44.0" prefWidth="214.0" visible="false" AnchorPane.rightAnchor="115.0">
+               <children>
+                  <ImageView fitHeight="21.0" fitWidth="18.0" layoutX="5.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@materials/error.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="38.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please provide a proper email address">
+                     <font>
+                        <Font name="Segoe UI" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="65.0" prefWidth="1169.0">
+         <children>
+            <Text layoutX="409.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="contactNumberInput" layoutX="540.0" layoutY="14.0" prefHeight="25.0" prefWidth="238.0" style="-fx-background-color: white;">
+               <effect>
+                  <DropShadow offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color red="0.9342105388641357" green="0.9342105388641357" blue="0.9342105388641357" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </TextField>
+            <AnchorPane fx:id="contactNumberError" layoutX="797.0" layoutY="10.0" prefHeight="36.0" prefWidth="273.0" visible="false" AnchorPane.rightAnchor="99.0">
+               <children>
+                  <ImageView fitHeight="21.0" fitWidth="18.0" layoutX="6.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@materials/error.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="39.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please provide a proper contact number">
+                     <font>
+                        <Font name="Segoe UI" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="110.0" prefWidth="1169.0">
+         <children>
+            <Button fx:id="nextBtn" layoutX="674.0" layoutY="35.0" mnemonicParsing="false" onMouseClicked="#validateFields" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #60C79A;" text="Next" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color red="0.8289473652839661" green="0.8289473652839661" blue="0.8289473652839661" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

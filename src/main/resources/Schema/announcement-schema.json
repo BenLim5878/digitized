@@ -1,0 +1,74 @@
+{
+  "type": "array",
+  "title": "announcement-schema",
+  "default": [],
+  "examples": [
+    [
+      {
+        "date": "15-03-2021",
+        "description": "description",
+        "title": "title"
+      }
+    ]
+  ],
+  "additionalItems": true,
+  "items": {
+    "$id": "#/items",
+    "anyOf": [
+      {
+        "$id": "#/items/anyOf/0",
+        "type": "object",
+        "title": "The first anyOf schema",
+        "default": {},
+        "examples": [
+          {
+            "date": "15-03-2021",
+            "description": "description",
+            "title": "title"
+          }
+        ],
+        "required": [
+          "date",
+          "description",
+          "title"
+        ],
+        "properties": {
+          "date": {
+            "$id": "#/items/anyOf/0/properties/date",
+            "type": "string",
+            "title": "The date schema",
+            "maxLength": 10,
+            "description": "Date posted for a particular announcement",
+            "default": "",
+            "examples": [
+              "15-03-2021"
+            ]
+          },
+          "description": {
+            "$id": "#/items/anyOf/0/properties/description",
+            "type": "string",
+            "title": "The description schema",
+            "description": "Description for a particular announcement",
+            "maxLength": 5000,
+            "default": "",
+            "examples": [
+              "description"
+            ]
+          },
+          "title": {
+            "$id": "#/items/anyOf/0/properties/title",
+            "type": "string",
+            "title": "The title schema",
+            "description": "Title for a particular announcement",
+            "maxLength": 1000,
+            "default": "",
+            "examples": [
+              "title"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    ]
+  }
+}

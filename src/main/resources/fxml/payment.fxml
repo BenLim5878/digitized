@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.digitized.controller.Cpayment">
+   <children>
+      <HBox fx:id="contentWindow" alignment="CENTER" prefHeight="525.0" prefWidth="1169.0" spacing="60.0">
+         <children>
+            <Pane prefHeight="525.0" prefWidth="626.0" style="-fx-background-color: transparent;">
+               <children>
+                  <VBox layoutX="10.0" layoutY="23.0" prefHeight="432.0" prefWidth="602.0" spacing="20.0">
+                     <children>
+                        <Pane prefHeight="206.0" prefWidth="602.0" style="-fx-background-color: white;">
+                           <children>
+                              <TextArea fx:id="booksReturn" editable="false" layoutX="148.0" layoutY="25.0" prefHeight="153.0" prefWidth="424.0" wrapText="true" />
+                              <Text layoutX="21.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Books returned :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="booksLateReturnPane" prefHeight="210.0" prefWidth="573.0" style="-fx-background-color: white; -fx-border-color: E04F5F;" visible="false">
+                           <children>
+                              <TextArea fx:id="booksLateReturn" editable="false" layoutX="148.0" layoutY="15.0" prefHeight="170.0" prefWidth="424.0" wrapText="true" />
+                              <Text layoutX="21.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Late returns :">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+                  <Text layoutX="463.0" layoutY="485.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="paymentTotal" layoutX="463.0" layoutY="493.0" prefHeight="28.0" prefWidth="149.0" style="-fx-background-color: white;" />
+               </children>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX" offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color red="0.8815789222717285" green="0.8815789222717285" blue="0.8815789222717285" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+         </children>
+      </HBox>
+      <AnchorPane prefHeight="95.0" prefWidth="1169.0">
+         <children>
+            <Button fx:id="nextBtn" layoutX="802.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#updateRecords" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: #60C79A;" text="Done" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color red="0.8289473652839661" green="0.8289473652839661" blue="0.8289473652839661" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="backBtn" layoutX="273.0" layoutY="34.0" mnemonicParsing="false" onMouseClicked="#backButtonClicked" prefHeight="28.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="Cancel" textFill="#616161">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow offsetX="2.0" offsetY="2.0">
+                     <color>
+                        <Color red="0.8289473652839661" green="0.8289473652839661" blue="0.8289473652839661" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

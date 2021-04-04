@@ -1,0 +1,96 @@
+{
+  "type": "array",
+  "title": "member-schema",
+  "default": [],
+  "examples": [
+    [
+      {
+        "Contact Number": "01234567890",
+        "ID": "TP055563",
+        "Name": "Ben Lim",
+        "Email Address": "tp055563@mail.apu.edu.my"
+      },
+      {
+        "Contact Number": "01234567890",
+        "ID": "TP055972",
+        "Name": "Joshua Rohan",
+        "Email Address": "tp055972@mail.apu.edu.my"
+      }
+    ]
+  ],
+  "additionalItems": true,
+  "items": {
+    "$id": "#/items",
+    "anyOf": [
+      {
+        "$id": "#/items/anyOf/0",
+        "type": "object",
+        "title": "The first anyOf schema",
+        "default": {},
+        "examples": [
+          {
+            "Contact Number": "01234567890",
+            "ID": "TP055563",
+            "Name": "Ben Lim",
+            "Email Address": "tp055563@mail.apu.edu.my"
+          }
+        ],
+        "required": [
+          "Contact Number",
+          "ID",
+          "Name",
+          "Email Address"
+        ],
+        "properties": {
+          "Contact Number": {
+            "$id": "#/items/anyOf/0/properties/Contact%20Number",
+            "type": "string",
+            "title": "The Contact Number schema",
+            "description": "Contact Number of a member",
+            "maxLength" : 12,
+            "default": "",
+            "examples": [
+              "01234567890"
+            ]
+          },
+          "ID": {
+            "$id": "#/items/anyOf/0/properties/ID",
+            "type": "string",
+            "title": "The ID schema",
+            "description": "TP ID of a member",
+            "minLength": 8,
+            "maxLength": 8,
+            "default": "",
+            "examples": [
+              "TP055563"
+            ]
+          },
+          "Name": {
+            "$id": "#/items/anyOf/0/properties/Name",
+            "type": "string",
+            "title": "The Name schema",
+            "description": "Name of a member",
+            "maxLength": 1000,
+            "default": "",
+            "examples": [
+              "Ben Lim"
+            ]
+          },
+          "Email Address": {
+            "$id": "#/items/anyOf/0/properties/Email%20Address",
+            "type": "string",
+            "title": "The Email Address schema",
+            "description": "TP mail of a member",
+            "maxLength" : 50,
+            "minLength" : 16,
+            "default": "",
+            "examples": [
+              "tp055563@mail.apu.edu.my"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    ]
+  }
+}

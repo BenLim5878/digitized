@@ -1,0 +1,48 @@
+#menuPanel .button:hover {
+	-fx-background-color: #9fadbd !important;
+}
+
+#menuOpenBtn:hover {
+	-fx-background-color: grey !important;
+}
+
+#userButton:hover {
+	-fx-background-color: grey !important;
+}
+
+#userPanel .button:hover {
+	-fx-background-color: #d1d1d1 !important;
+}
+
+.statusMessage{
+	-fx-font-family: "Segoe UI";
+	-fx-font-size: 14;
+	-fx-fill: white;
+	-fx-font-weight: bold;
+}
+
+#saveBtn:hover {
+	-fx-background-color: #2c7e5f !important;
+	-fx-cursor: hand;
+}
+
+.bookWindow{
+	-fx-background-color: white;
+	-fx-padding: 10;
+}
+
+.noticeWindow{
+	-fx-padding: 10;
+	-fx-background-color: white !important;
+	-fx-background-radius: 3;
+}
+
+#saveBtn:hover {
+	-fx-background-color: #397960 !important;
+	-fx-cursor: hand;
+}
+
+#addBook:hover{
+	-fx-background-color: #397960 !important;
+	-fx-cursor: hand;
+}

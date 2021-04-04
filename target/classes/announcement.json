@@ -1,0 +1,17 @@
+[
+  {
+    "date": "17-03-2021",
+    "description": "- Enables librarian to search Book on search bar",
+    "title": "Digitized 1.0"
+  },
+  {
+    "date": "17-03-2021",
+    "description": "- Bug fixes\n- Password encryption",
+    "title": "New Update 1.1"
+  },
+  {
+    "date": "17-03-2021",
+    "description": "- Added some animations\n- All the transaction data will be shown in a table\n- New librarian can register into Digitized",
+    "title": "New Update 1.2"
+  }
+]

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JsonSchemaMappingsProjectConfiguration">
+    <state>
+      <map>
+        <entry key="announcement-schema">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="announcement-schema" />
+              <option name="relativePathToSchema" value="src/main/resources/com/digitized/Schema/announcement-schema.json" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="src/main/resources/com/digitized/announcement.json" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+        <entry key="book-schema">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="book-schema" />
+              <option name="relativePathToSchema" value="src/main/resources/com/digitized/Schema/book-schema.json" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="src/main/resources/com/digitized/book.json" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+        <entry key="librarian-schema">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="librarian-schema" />
+              <option name="relativePathToSchema" value="src/main/resources/com/digitized/Schema/librarian-schema.json" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="src/main/resources/com/digitized/librarian.json" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+        <entry key="member-schema">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="member-schema" />
+              <option name="relativePathToSchema" value="src/main/resources/com/digitized/Schema/member-schema.json" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="src/main/resources/com/digitized/member.json" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+        <entry key="transaction-schema">
+          <value>
+            <SchemaInfo>
+              <option name="name" value="transaction-schema" />
+              <option name="relativePathToSchema" value="src/main/resources/com/digitized/Schema/transaction-schema.json" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="src/main/resources/com/digitized/transaction.json" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+      </map>
+    </state>
+  </component>
+</project>

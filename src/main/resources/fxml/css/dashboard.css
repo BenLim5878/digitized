@@ -1,0 +1,25 @@
+.announcementBox {
+	-fx-background-color: white;
+	-fx-background-radius: 3;
+	-fx-padding: 10;
+}
+
+.announcementTitle {
+	-fx-font-family: "Segoe UI";
+	-fx-font-size: 16;
+}
+
+.announcementDate {
+	-fx-font-family: "Segoe UI";
+	-fx-font-size: 14;
+	-fx-fill: rgb(83, 83, 83);
+}
+
+.announcementContent {
+	-fx-font-family: "Segoe UI";
+	-fx-font-size: 14;
+}
+
+#addAnnouncement:hover{
+	-fx-background-color: #CBCBCB !important;
+}

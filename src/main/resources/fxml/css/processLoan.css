@@ -1,0 +1,71 @@
+.progress-bar {
+    -fx-accent: #60C79A !important;
+}
+
+.progress-bar > .track {
+    -fx-text-box-border: transparent !important;
+    -fx-control-inner-background: white !important;
+}
+.combo-box:editable .arrow-button{
+    -fx-background-color: white;
+}
+
+.combo-box:editable .arrow-button:hover{
+    -fx-cursor: hand;
+}
+
+.combo-box:editable .list-view:hover{
+    -fx-cursor: hand;
+}
+
+.combo-box:editable .text-field{
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14;
+}
+
+.errorInput{
+    -fx-border-style: hidden hidden solid hidden !important;
+    -fx-border-color: #d04f4f;
+}
+
+.errorText{
+    -fx-font-size: 14;
+    -fx-font-family: "Segoe UI";
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: white;
+}
+
+.bookWindow{
+    -fx-background-color: white;
+    -fx-padding: 10;
+}
+
+.bookWindow:hover{
+    -fx-background-color: #c1c1c1;
+    -fx-cursor: hand;
+}
+
+#nextBtn:hover{
+    -fx-background-color:#397960 !important;
+    -fx-cursor: hand;
+}
+
+#backBtn:hover{
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-fill: black!important;
+}
+
+#searchByBox:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #d6d6d6 !important;
+}
+
+#searchByBox .list-view{
+    -fx-cursor: hand;
+}
+
+
+

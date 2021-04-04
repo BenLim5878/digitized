@@ -1,0 +1,89 @@
+{
+  "type": "array",
+  "title": "librarian-schema",
+  "default": [],
+  "examples": [
+    [
+      {
+        "emailAddress": "tp055563@mail.apu.edu.my",
+        "password": "cHIPHJ",
+        "fullName": "Ben Lim",
+        "tp": "TP055563"
+      }
+    ]
+  ],
+  "additionalItems": true,
+  "items": {
+    "$id": "#/items",
+    "anyOf": [
+      {
+        "$id": "#/items/anyOf/0",
+        "type": "object",
+        "title": "The first anyOf schema",
+        "default": {},
+        "examples": [
+          {
+            "emailAddress": "tp055563@mail.apu.edu.my",
+            "password": "cHIPHJ",
+            "fullName": "Ben Lim",
+            "tp": "TP055563"
+          }
+        ],
+        "required": [
+          "emailAddress",
+          "password",
+          "fullName",
+          "tp"
+        ],
+        "properties": {
+          "emailAddress": {
+            "$id": "#/items/anyOf/0/properties/emailAddress",
+            "type": "string",
+            "title": "The emailAddress schema",
+            "description": "TP mail of a librarian",
+            "maxLength" : 50,
+            "minLength" : 16,
+            "default": "",
+            "examples": [
+              "tp055563@mail.apu.edu.my"
+            ]
+          },
+          "password": {
+            "$id": "#/items/anyOf/0/properties/password",
+            "type": "string",
+            "title": "The password schema",
+            "description": "Encrypted password of a librarian",
+            "default": "",
+            "examples": [
+              "cHIPHJ"
+            ]
+          },
+          "fullName": {
+            "$id": "#/items/anyOf/0/properties/fullName",
+            "type": "string",
+            "title": "The fullName schema",
+            "description": "Full name of a librarian",
+            "maxLength":1000,
+            "default": "",
+            "examples": [
+              "Ben Lim"
+            ]
+          },
+          "tp": {
+            "$id": "#/items/anyOf/0/properties/tp",
+            "type": "string",
+            "title": "The tp schema",
+            "minLength": 8,
+            "maxLength": 8,
+            "description": "TP ID of a librarian",
+            "default": "",
+            "examples": [
+              "TP055563"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    ]
+  }
+}

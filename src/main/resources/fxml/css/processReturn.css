@@ -1,0 +1,44 @@
+.memberWindow{
+    -fx-background-color: white;
+    -fx-padding: 10;
+}
+
+.memberWindow:hover{
+    -fx-background-color: #c1c1c1 !important;
+    -fx-cursor: hand;
+}
+
+.userBookDetails{
+    -fx-padding: 20;
+    -fx-background-color: white;
+}
+
+.userBookDetailsTitle{
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 18;
+}
+
+.userBookDetailsInstruction{
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14;
+}
+
+.bookList{
+    -fx-background-color: #eaeaea;
+    -fx-padding: 5;
+}
+
+.bookList:hover{
+    -fx-background-color: #bfd3e7 !important;
+    -fx-cursor: hand;
+}
+
+#nextBtn:hover{
+    -fx-background-color: #397960 !important;
+    -fx-cursor: hand;
+}
+
+#backBtn:hover{
+    -fx-cursor: hand;
+}
+

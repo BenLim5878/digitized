@@ -1,0 +1,114 @@
+{
+  "type": "array",
+  "title": "transaction-schema",
+  "default": [],
+  "examples": [
+    [
+      {
+        "id": 1,
+        "tpID": "TP055563",
+        "fullName": "Bret Lim",
+        "bookID": "2",
+        "bookName": "Javafx for dummies",
+        "expireBefore": "12/10/2021",
+        "status": "normal",
+        "phoneNumber": "011-39987039"
+      },
+      {
+        "id": 2,
+        "tpID": "TP055565",
+        "fullName": "Bret Tan",
+        "bookID": "2",
+        "bookName": "Javafx for dummies",
+        "expireBefore": "12/10/2021",
+        "status": "normal",
+        "phoneNumber": "011-39987043"
+      }
+    ]
+  ],
+  "additionalItems": true,
+  "items": {
+    "$id": "#/items",
+    "anyOf": [
+      {
+        "tpID": {
+          "$id": "#/items/anyOf/0/properties/tpID",
+          "type": "string",
+          "title": "The tpID schema",
+          "minLength": 8,
+          "maxLength": 8,
+          "description": "tpID of a user",
+          "default": "",
+          "examples": [
+            "TP055563"
+          ]
+        },
+        "fullName": {
+          "$id": "#/items/anyOf/0/properties/fullName",
+          "type": "string",
+          "title": "The fullName schema",
+          "description": "Full name of user",
+          "default": "",
+          "maxLength": "500",
+          "examples": [
+            "Bret Lim"
+          ]
+        },
+        "bookID": {
+          "$id": "#/items/anyOf/0/properties/bookID",
+          "type": "string",
+          "title": "The bookID schema",
+          "description": "ISBN of a book",
+          "default": "",
+          "examples": [
+            "2"
+          ]
+        },
+        "bookName": {
+          "$id": "#/items/anyOf/0/properties/bookName",
+          "type": "string",
+          "title": "The bookName schema",
+          "description": "Title of a book",
+          "maxLength": 1000,
+          "default": "",
+          "examples": [
+            "Javafx for dummies"
+          ]
+        },
+        "expireBefore": {
+          "$id": "#/items/anyOf/0/properties/expireBefore",
+          "type": "string",
+          "title": "The expireBefore schema",
+          "description": "Loan expiry date in Unix format",
+          "default": "",
+          "examples": [
+            "12/10/2021"
+          ]
+        },
+        "status": {
+          "$id": "#/items/anyOf/0/properties/status",
+          "type": "string",
+          "title": "The status schema",
+          "description": "Status of a loan",
+          "default": "normal",
+          "maxLength": 20,
+          "examples": [
+            "normal"
+          ]
+        },
+        "phoneNumber": {
+          "$id": "#/items/anyOf/0/properties/phoneNumber",
+          "type": "string",
+          "title": "The phoneNumber schema",
+          "description": "Phone number of a user",
+          "default": "undefined",
+          "maxLength": 12,
+          "examples": [
+            "011-39987039"
+          ]
+        },
+        "additionalProperties": true
+      }
+    ]
+  }
+}

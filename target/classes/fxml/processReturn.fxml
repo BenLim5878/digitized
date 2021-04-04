@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="dashboardWindow" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1169.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.digitized.controller.CprocessReturn">
+   <top>
+      <AnchorPane prefHeight="67.0" prefWidth="1169.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="34.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Returns">
+               <font>
+                  <Font name="Segoe UI" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <fx:include source="returnDetails.fxml" />
+   </center>
+</BorderPane>

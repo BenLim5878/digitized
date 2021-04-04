@@ -1,0 +1,15 @@
+.statusMessage{
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14.5;
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+
+#postBtn:hover{
+    -fx-background-color: #397960 !important;
+}
+
+#cancelBtn:hover{
+    -fx-font-weight: bold;
+}
+

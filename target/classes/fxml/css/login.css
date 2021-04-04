@@ -1,0 +1,15 @@
+#loginBtn {
+	-fx-background-color: #60c79a;
+}
+
+#loginBtn:hover {
+	-fx-background-color: #449170 !important;
+	-fx-cursor: hand;
+}
+
+.statusMessage{
+	-fx-font-family: "Segoe UI";
+	-fx-font-size: 13.5;
+	-fx-fill: white;
+	-fx-font-weight: bold;
+}
